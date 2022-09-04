@@ -1,0 +1,14 @@
+plugins {
+    id 'base'
+}
+
+println 'hello gradle build script'
+
+tasks.register('hello') {
+    println 'hello task'
+}
+
+tasks.register('copyTxt', Copy) {
+    from 'test.txt'
+    into "$buildDir"
+}
